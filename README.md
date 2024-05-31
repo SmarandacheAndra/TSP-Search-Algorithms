@@ -1,4 +1,4 @@
-# Traveling Salesman Problem Solver
+# Traveling Salesman Problem 
 
 This repository contains a Java application for solving the Traveling Salesman Problem (TSP) using three search algorithms: Breadth-First Search (BFS), Uniform Cost Search (UCS), and A* Search.
 
