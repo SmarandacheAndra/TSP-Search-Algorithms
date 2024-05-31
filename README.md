@@ -12,23 +12,21 @@ This repository contains a Java application for solving the Traveling Salesman P
 ```
 TSP-Search-Algorithms/
 ├── src/
-│   └── main/
-│       └── java/
-│           └── com/
-│               └── tsp/
-│                   ├── App.java
-│                   ├── BFS.java
-│                   ├── Node.java
-│                   ├── UCS.java
-│                   ├── AStar.java
-│                   ├── TSP_DataGenerator.java
-│                   ├── TSP_FileReader.java
-│                   └── resources/
-│                       ├── generated11.tsp
-│                       └── generated4.tsp
-│                       └── generated7.tsp
-│                       └── ulysses16.tsp
-│                       └── ulysses22.tsp
+│   └── com/
+│        └── tsp/
+│            ├── App.java
+│            ├── BFS.java
+│            ├── Node.java
+│            ├── UCS.java
+│            ├── AStar.java
+│            ├── TSP_DataGenerator.java
+│            ├── TSP_FileReader.java
+├── resources/
+│   ├── generated11.tsp
+│   └── generated4.tsp
+│   └── generated7.tsp
+│   └── ulysses16.tsp
+│   └── ulysses22.tsp
 ├── README.md
 ```
 
@@ -63,16 +61,22 @@ TSP-Search-Algorithms/
 
     - **Compile the Code**
 
-      Open a terminal and navigate to the `TSP-Search-Algorithms` directory. Run the following command to compile the code:
+      Open a terminal and navigate to the `TSP-Search-Algorithms` directory. Run the following commands to compile the code:
       ```sh
-      javac -d out -sourcepath src/main/java src/main/java/com/tsp/App.java
+      javac -d out TSP_AI/src/com/tsp/*.java
       ```
+       ```sh
+      xcopy /E /I TSP_AI\resources out\resources
+       ```
+      ```sh
+      cd out
+       ```
 
     - **Run the Application**
 
       After successful compilation, run the application with the following command:
       ```sh
-      java -cp out com.tsp.App
+      java com.tsp.App
       ```
   4. **Using Command Line with Maven**
     - **Compile the Code**
@@ -109,7 +113,7 @@ The project includes sample input files in the `resources` directory. These file
 
 ## Generating TSP Input Files
 
-To generate new TSP input files, you can use the `TSP_DataGenerator` class. Uncomment the line in `App.java` and specify the desired number of cities:
+To generate new TSP input files, you can use the `TSP_DataGenerator` in `App.java` and specify the desired number of cities:
 ```java
 TSP_DataGenerator.generateTSPFile("resources/generated11.tsp", 11);
 ```
